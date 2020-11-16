@@ -1,7 +1,8 @@
 | Title     | Elections 2020                             |
 | :-------- | :----------------------------------------- |
 | Author(s) |                                            |
-| Link      | https://rivalryissue.github.io/article     |
+| Link      | https://rivalryissue.github.io/            |
+| Design    | https://www.figma.com/file/AlVglapqkfj2WyR4KJurwR/Rivalry-Site---UM%2FOSU          |
 
 # Setup
 
