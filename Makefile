@@ -24,6 +24,4 @@ build: auth.json fetch
 
 
 gh-pages: build-prod
-	(cd dist; git add --all)
-	(cd dist; git commit -m "Build output as of $(git log '--format=format:%H' master -1)")
-	git push -u origin gh-pages
+	yarn deploy
