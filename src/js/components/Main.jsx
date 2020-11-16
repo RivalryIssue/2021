@@ -1,7 +1,5 @@
 import React from "react";
 
-console.log("hi")
-
 const Main = () => {
   return (
     <div>
