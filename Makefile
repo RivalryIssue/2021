@@ -21,7 +21,7 @@ dev: auth.json fetch
 build: auth.json fetch
 	rm -rf dist/*
 	yarn run build
-
+	cp template/404.html dist
 
 gh-pages: build-prod
 	yarn deploy
