@@ -1,0 +1,11 @@
+{
+    "archie": {
+        "gdoc": "1XmFZiYvibdgY58KFkqdgNV55iVbRF3jfKW6Yo0kKyPU",
+        "template": "./template/index.html",
+        "output": "./template/copy.json",
+        "apiConfig": "./auth.json"
+    },
+    "hostname": "magnify.michigandaily.us",
+    "base_url": "sourdough",
+    "ga_id": "UA-168080597-1"
+}

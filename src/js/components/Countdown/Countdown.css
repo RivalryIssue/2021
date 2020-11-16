@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Open-Sans-Light;
+  src: url("../../../assets/fonts/OpenSans-Light.ttf");
+}
+
+@font-face {
+  font-family: Open-Sans-Bold;
+  src: url("../../../assets/fonts/OpenSans-Bold.ttf");
+}
+
+.background-fill {
+  padding: 4%;
+  background-color: #19274a;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.counter-container {
+  text-align: center;
+}
+
+.counter {
+  font-family: Open-Sans-Bold, sans-serif;
+  color: white;
+  font-size: min(10vw, 6rem);
+}
+
+.counter-header {
+  color: white;
+  font-size: min(10vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: Open-Sans-Light, sans-serif;
+  margin-bottom: 5px;
+}
