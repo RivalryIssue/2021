@@ -1,4 +1,4 @@
-| Title     | Elections 2020                             |
+| Title     | Rivalry Edition 2020                             |
 | :-------- | :----------------------------------------- |
 | Author(s) |                                            |
 | Link      | https://rivalryissue.github.io/            |
