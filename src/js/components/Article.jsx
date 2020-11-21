@@ -7,7 +7,7 @@ const Article = ({data}) => {
     } else if(data.type === "title") {
         return <h1 className="articleTitle">{data.value}</h1>
     } else if(data.type === "author") {
-        return <p>{data.value}</p>
+        return <p className="articleAuthor">{data.value}</p>
     }
   }
   return (

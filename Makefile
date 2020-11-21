@@ -22,6 +22,12 @@ build: auth.json fetch
 	rm -rf dist/*
 	yarn run build
 	cp template/404.html dist
+	cp template/CNAME dist
+
+push:
+	git add .
+	git commit -m "$(m)"
+	git push -u origin master
 
 gh-pages: build-prod
 	yarn deploy
