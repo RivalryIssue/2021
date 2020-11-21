@@ -1,7 +1,7 @@
 | Title     | Rivalry Edition 2020                             |
 | :-------- | :----------------------------------------- |
 | Author(s) |                                            |
-| Link      | https://rivalryissue.github.io/            |
+| Link      | https://therivalrygame.com/            |
 | Design    | https://www.figma.com/file/AlVglapqkfj2WyR4KJurwR/Rivalry-Site---UM%2FOSU          |
 
 # Setup
