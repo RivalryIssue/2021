@@ -27,7 +27,7 @@ build: auth.json fetch
 push:
 	git add .
 	git commit -m "$(m)"
-	git push -u origin master
+	git push -u origin main
 
 gh-pages: build-prod
 	yarn deploy
