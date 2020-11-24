@@ -23,10 +23,28 @@ const ArticleCard = ({ data }) => {
   let type = data.type;
   let article_num = data.num;
 
+  let div_class_name = "article-card";
+
+  if (article_num % 2 === 0) {
+    div_class_name = "right-" + div_class_name;
+  } else {
+    div_class_name = "left-" + div_class_name;
+  }
+
+  let div_id = "";
+  if (type == 0) {
+    div_id += "michigan-card";
+  } else {
+    div_id += "osu-card";
+  }
+
   return (
-    <div className="article-card">
+    <div className={div_class_name} id={div_id}>
       {article_data.map((article_data) => {
-        return getData(article_data);
+        return (
+          getData(article_data) +
+          <button className="article-button">Read Article</button>
+        );
       })}
     </div>
   );
