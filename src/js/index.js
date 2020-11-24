@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Main from "./components/Main";
 import Article from "./components/Article";
+import ArticleCard from "./components/ArticleCard";
 import data from "../../template/copy.json";
 
 window.onload = function () {
@@ -19,6 +20,7 @@ export default function App() {
         </Route>
         <Route path="/">
           <Main />
+          <ArticleCard data={data.michigan[0].value} />
         </Route>
       </Switch>
     </Router>
