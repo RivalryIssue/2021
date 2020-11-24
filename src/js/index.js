@@ -12,6 +12,11 @@ window.onload = function () {
 };
 
 export default function App() {
+  let article_card_props = {
+    article: data.michigan[0].value,
+    type: 0, // 0: michigan, 1: lantern
+    num: 0, // number of article
+  };
   return (
     <Router>
       <Switch>
@@ -20,7 +25,7 @@ export default function App() {
         </Route>
         <Route path="/">
           <Main />
-          <ArticleCard data={data.michigan[0].value} />
+          <ArticleCard data={article_card_props} />
         </Route>
       </Switch>
     </Router>

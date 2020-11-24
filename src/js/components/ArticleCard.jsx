@@ -2,7 +2,7 @@ import React from "react";
 
 const ArticleCard = ({ data }) => {
   function getData(data) {
-    console.log(data);
+    //console.log(data);
     if (data.type === "text") {
       return (
         <p
@@ -18,10 +18,15 @@ const ArticleCard = ({ data }) => {
       return <div className="article-date">{data.value}</div>;
     }
   }
+
+  let article_data = data.article;
+  let type = data.type;
+  let article_num = data.num;
+
   return (
     <div className="article-card">
-      {data.map((data) => {
-        return getData(data);
+      {article_data.map((article_data) => {
+        return getData(article_data);
       })}
     </div>
   );
