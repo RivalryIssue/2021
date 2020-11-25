@@ -27,6 +27,28 @@ div {
   border-style: solid;
 }
 
+.paper-color {
+  height: 20px;
+  width: 20px;
+  margin-right: auto !important;
+  margin-left: 10%;
+  padding-left: 0;
+  padding-right: 90px;
+  margin-right: 5px;
+}
+
+#michigan-card .paper-color {
+  height: 20px;
+  width: 20px;
+  background-color: #00274c;
+}
+
+#osu-card .paper-color {
+  height: 20px;
+  width: 20px;
+  background-color: #ca1111;
+}
+
 .left-article-card {
   text-align: left;
 }
@@ -56,6 +78,13 @@ div {
   font-family: Antonio, Roboto Condensed, Segoe UI, Tahoma, Geneva, Verdana,
     sans-serif;
   padding-right: 90px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.article-blurb {
+  padding-right: 90px;
+  margin-right: 5px;
 }
 
 .article-title {
@@ -71,10 +100,50 @@ div {
   font-weight: lighter;
 }
 
-#michigan-card {
-  background-color: blue;
+.article-card-button a,
+.article-card-button a:hover {
+  height: 50px;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 13px;
 }
 
-#osu-card {
-  background-color: red;
+.article-card-button {
+  margin-right: 5px;
+  padding-right: 90px;
+  border: none;
+  background-color: transparent;
+  outline: none;
 }
+
+#michigan-card .article-card-button a:hover,
+#michigan-card .article-card-button a {
+  color: #00274c;
+  border: 1px solid #00274c;
+}
+
+#osu-card .article-card-button a:hover,
+#osu-card .article-card-button a {
+  color: #ca1111;
+  border: 1px solid #ca1111;
+}
+
+.article-card-button a {
+  border-radius: 25px;
+  text-decoration: none;
+  padding: 15px 55px;
+  background-color: transparent;
+}
+
+.card-news-logo {
+  height: auto;
+  max-width: 50%;
+  border: 0;
+  margin-right: 5px;
+  padding-right: 90px;
+  padding-top: -10px;
+  padding-bottom: -10px;
+  border: none;
+}
+
+// end article card styles

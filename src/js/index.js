@@ -16,6 +16,10 @@ export default function App() {
     article: data.michigan[0].value,
     type: 0, // 0: michigan, 1: lantern
     num: 0, // number of article
+    img:
+      "https://www.michigandaily.com/sites/default/files/styles/large/public/201124/ace.FBC_.Rutgers.11.21.20.00918..jpg?itok=fXkqzybl", //url to background image
+    link:
+      "https://www.michigandaily.com/section/football/cade-mcnamara-set-start-quarterback-saturday-according-his-teammates", //article link
   };
   return (
     <Router>
