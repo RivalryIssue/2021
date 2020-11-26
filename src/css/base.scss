@@ -20,11 +20,14 @@ div {
 .right-article-card {
   min-width: 100%;
   width: 100%;
-  height: 100vh;
-  min-height: 100vh;
+  height: 70vh;
+  min-height: 70vh;
   background-repeat: no-repeat;
   background-size: cover;
   border-style: solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .paper-color {
@@ -55,10 +58,14 @@ div {
 
 .left-article-card div {
   margin-right: auto !important;
-  margin-left: 10%;
   padding-left: 0;
   padding-right: 90px;
+  margin-left: 90px;
   text-align: left;
+}
+
+.left-article-card .article-author {
+  margin-left: 0%;
 }
 
 .right-article-card {
@@ -104,6 +111,7 @@ div {
 .article-card-button a:hover {
   height: 50px;
   margin-top: 20px;
+  width: auto;
   font-weight: 700;
   font-size: 13px;
 }
@@ -116,14 +124,14 @@ div {
   outline: none;
 }
 
-#michigan-card .article-card-button a:hover,
-#michigan-card .article-card-button a {
+#michigan-card .article-card-text .article-card-button a:hover,
+#michigan-card .article-card-text .article-card-button a {
   color: #00274c;
   border: 1px solid #00274c;
 }
 
-#osu-card .article-card-button a:hover,
-#osu-card .article-card-button a {
+#osu-card .article-card-text .article-card-button a:hover,
+#osu-card .article-card-text .article-card-button a {
   color: #ca1111;
   border: 1px solid #ca1111;
 }
@@ -137,13 +145,38 @@ div {
 
 .card-news-logo {
   height: auto;
-  max-width: 50%;
+  max-width: 30%;
+  width: 20%;
   border: 0;
   margin-right: 5px;
   padding-right: 90px;
-  padding-top: -10px;
-  padding-bottom: -10px;
+  padding-top: 20px;
+  padding-bottom: 10px;
   border: none;
 }
 
-// end article card styles
+@media screen and (max-width: 550px) {
+  .card-news-logo {
+    max-width: 45%;
+    width: 35%;
+  }
+  .left-article-card,
+  .right-article-card {
+    height: 100vh;
+    min-height: 100vh;
+  }
+}
+
+.article-card-text {
+  background-color: lightgrey;
+  display: inline-block;
+  padding-right: 90px;
+  height: auto;
+  width: auto;
+}
+
+.article-card-text div {
+  margin-left: 15%;
+}
+
+// end of article card styles
