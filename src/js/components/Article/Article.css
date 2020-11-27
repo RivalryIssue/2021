@@ -1,0 +1,92 @@
+h1 {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+.article-landing-page {
+  height: 100vh;
+  width: 100vw;
+}
+
+.article-container {
+  width: 90%;
+  max-width: 850px;
+  margin: auto;
+}
+
+.article-image {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.article-title {
+  font-size: max(4em, 7.2vw);
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.article-author {
+  font-size: max(4em, 7.2vw);
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin-bottom: 8%;
+}
+
+.article-paragraph {
+  font-size: 20px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  margin-bottom: 5%;
+}
+
+.home-button {
+  margin: auto;
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  background-color: black;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  color: white;
+  padding: 20px;
+  width: 200px;
+  justify-content: center;
+  border: none;
+}
+
+.article-footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ebebeb;
+  min-height: 15vh;
+  padding-bottom: 20px;
+}
+
+.donate-text {
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: max(3em, 4.2vw);
+}
+
+.donate-button {
+  margin: auto;
+  margin-bottom: 15px;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  background-color: #c4c4c4;
+  font-size: max(2em, 3vw);
+  padding: 15px;
+  border: none;
+}
+
+.dontate-flair {
+  margin: auto;
+  width: 40px;
+  padding: 20px;
+  background-color: #ff0000;
+}
