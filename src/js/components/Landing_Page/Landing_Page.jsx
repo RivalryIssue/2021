@@ -21,12 +21,12 @@ const Landing_Page = ({ data }) => {
         <h1 className="title">{data.homepage.intro.title}</h1>
       </div>
 
-      <div className="button-container">
+      {/* <div className="button-container">
         <div className="button-wrapper">
           <button className="TMD">The Michigan Daily</button>
           <button className="lantern">The Lantern</button>
         </div>
-      </div>
+      </div> */}
 
       <div className="subtitle">
         <h2>{data.homepage.intro.subtitle}</h2>
