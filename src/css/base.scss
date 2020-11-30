@@ -1,6 +1,10 @@
 $daily-base: #374567;
 $lantern-base: #bb0000;
 
+*:focus {
+  outline: none !important;
+}
+
 html,
 body {
   margin: 0;
@@ -48,6 +52,7 @@ body {
 .articleContainer {
   width: 100%;
   text-align: center;
+  margin-top: 40px;
 }
 
 // .mainTabs{
@@ -105,11 +110,13 @@ body {
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
-  li:hover:after {
+  li:hover:after,
+  li:focus:after {
     width: 80%;
     left: 10%;
   }
-  li:hover {
+  li:hover,
+  li:focus {
     cursor: pointer;
   }
 
@@ -129,28 +136,45 @@ body {
   }
 }
 
+.testWrap {
+  overflow: hidden;
+}
+
 .article-card {
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 10vh;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  pointer-events: none;
+  position: relative;
 
   .article-text {
     background-color: #e5e5e5e5;
     width: 40%;
-    height: 50vh;
+    height: auto;
+    max-height: 50vh;
     padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
   }
 
   .article-title {
     font-size: 50px;
+    pointer-events: auto;
   }
   .article-author {
     font-size: 20px;
   }
 
   .article-card-button {
+    pointer-events: auto;
     padding: 10px 32px;
     font-family: "Roboto Condensed";
     text-align: center;
@@ -164,7 +188,8 @@ body {
     background-color: rgba(255, 255, 255, 0);
   }
 
-  .article-card-button:hover {
+  .article-card-button:hover,
+  .article-card-button:focus {
     color: white;
   }
 
@@ -178,7 +203,9 @@ body {
 .left-article-card {
   text-align: left;
   .article-text {
-    float: right;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
   }
   .card-news-logo {
     left: 0;
@@ -192,12 +219,27 @@ body {
   }
 }
 
+.article-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  transition: inherit;
+}
+.article-card:hover::before {
+  transform: scale(1.1);
+}
+
 .michigan-card {
   .article-card-button {
     color: $daily-base;
     border: 2px solid $daily-base;
   }
-  .article-card-button:hover {
+  .article-card-button:hover,
+  .article-card-button:focus {
     background-color: $daily-base;
   }
 }
@@ -207,180 +249,50 @@ body {
     color: $lantern-base;
     border: 2px solid $lantern-base;
   }
-  .article-card-button:hover {
+  .article-card-button:hover,
+  .article-card-button:focus {
     background-color: $lantern-base;
   }
 }
 
-//article card styling
-// div {
-//   display: block;
-// }
+.text-link {
+  color: inherit;
+  text-decoration: inherit;
+}
 
-// .left-article-card,
-// .right-article-card {
-//   min-width: 100%;
-//   width: 100%;
-//   height: 70vh;
-//   min-height: 70vh;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   border-style: solid;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-// }
+.michigan-card-link:hover,
+.michigan-card-link:focus {
+  color: $daily-base;
+}
+.osu-card-link:hover,
+.osu-card-link:focus {
+  color: $lantern-base;
+}
 
-// .paper-color {
-//   height: 20px;
-//   width: 20px;
-//   margin-right: auto !important;
-//   margin-left: 10%;
-//   padding-left: 0;
-//   padding-right: 90px;
-//   margin-right: 5px;
-// }
+@media only screen and (max-width: 1075px) {
+  .article-card {
+    margin-top: 0;
+  }
+  .article-card-button {
+    display: none !important;
+  }
+}
 
-// .michigan-card .paper-color {
-//   height: 20px;
-//   width: 20px;
-//   background-color: #00274c;
-// }
+@media only screen and (max-width: 850px) {
+  .article-card {
+    height: 70vh;
+    .article-title {
+      font-size: 40px;
+    }
+  }
+}
 
-// .osu-card .paper-color {
-//   height: 20px;
-//   width: 20px;
-//   background-color: #ca1111;
-// }
-
-// .left-article-card {
-//   text-align: left;
-// }
-
-// .left-article-card div {
-//   margin-right: auto !important;
-//   padding-left: 0;
-//   padding-right: 90px;
-//   margin-left: 90px;
-//   text-align: left;
-// }
-
-// .left-article-card .article-author {
-//   margin-left: 0%;
-// }
-
-// .right-article-card {
-//   text-align: right;
-// }
-
-// .right-article-card {
-//   margin-left: auto !important;
-//   margin-right: 10%;
-//   padding-right: 0;
-//   padding-left: 90px;
-//   text-align: right;
-// }
-
-// .article-author,
-// .article-title {
-//   // font-family: Antonio, Roboto Condensed, Segoe UI, Tahoma, Geneva, Verdana,
-//   //   sans-serif;
-//   padding-right: 90px;
-//   margin-right: 5px;
-//   margin-top: 10px;
-// }
-
-// .article-blurb {
-//   padding-right: 90px;
-//   margin-right: 5px;
-// }
-
-// .article-title {
-//   font-size: 3.5em;
-//   line-height: 1;
-//   font-weight: 700;
-// }
-
-// .article-author {
-//   color: black;
-//   font-size: 1.8em;
-//   line-height: 1.1;
-//   font-weight: lighter;
-// }
-
-// .article-card-button a,
-// .article-card-button a:hover {
-//   height: 50px;
-//   margin-top: 20px;
-//   width: auto;
-//   font-weight: 700;
-//   font-size: 13px;
-// }
-
-// .article-card-button {
-//   margin-right: 5px;
-//   padding-right: 90px;
-//   border: none;
-//   background-color: transparent;
-//   outline: none;
-// }
-
-// .michigan-card .article-card-text .article-card-button a:hover,
-// .michigan-card .article-card-text .article-card-button a {
-//   color: #00274c;
-//   border: 1px solid #00274c;
-// }
-
-// .osu-card .article-card-text .article-card-button a:hover,
-// .osu-card .article-card-text .article-card-button a {
-//   color: #ca1111;
-//   border: 1px solid #ca1111;
-// }
-
-// .article-card-button a {
-//   border-radius: 25px;
-//   text-decoration: none;
-//   padding: 15px 55px;
-//   background-color: transparent;
-// }
-
-// .card-news-logo {
-//   height: auto;
-//   max-width: 30%;
-//   width: 20%;
-//   border: 0;
-//   margin-right: 5px;
-//   padding-right: 90px;
-//   padding-top: 20px;
-//   padding-bottom: 10px;
-//   border: none;
-// }
-
-// @media screen and (max-width: 550px) {
-//   .card-news-logo {
-//     max-width: 45%;
-//     width: 35%;
-//   }
-//   .left-article-card,
-//   .right-article-card {
-//     height: 100vh;
-//     min-height: 100vh;
-//   }
-//   .left-article-card div {
-//     margin-left: 0;
-//   }
-// }
-
-// .article-card-text {
-//   background-color: lightgrey;
-//   display: inline-block;
-//   padding-right: 90px;
-//   height: auto;
-//   width: auto;
-// }
-
-// .article-card-text div {
-//   margin-left: 15%;
-// }
-
-// end of article card styles
+@media only screen and (max-width: 550px) {
+  .article-text {
+    width: 60% !important;
+    height: auto !important;
+    .article-title {
+      font-size: 30px;
+    }
+  }
+}

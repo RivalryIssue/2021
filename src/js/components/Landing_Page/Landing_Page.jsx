@@ -1,39 +1,30 @@
 import React from "react";
 import "./Landing_Page.css";
-import logo from "../../../images/TMDMBlack.png";
+import tmd_logo from "./../../../images/tmd-logo-black.png";
+import lantern_logo from "./../../../images/lanternLogo.png";
+import Scroll from "react-scroll";
 
 const Landing_Page = ({ data }) => {
+  var scroll = Scroll.animateScroll;
+  function scrollClick() {
+    scroll.scrollTo(window.innerHeight, { smooth: true });
+  }
   return (
     <>
       <div className="landing-page">
-        <img
-          className="Landing_Page_Image_Michigan"
-          src="https://images.rivals.com/image/upload/f_auto,q_auto/xyl1hw5axp8ndhsuwkt3"
-        />
-        <img
-          className="Landing_Page_Image_Ohio"
-          src="https://images.rivals.com/image/upload/f_auto,q_auto/xyl1hw5axp8ndhsuwkt3"
-        />
+        <div className="Landing_Page_Image_Michigan"></div>
+        <div className="Landing_Page_Image_Ohio"></div>
       </div>
 
       <div className="logo_title_box">
-        <img className="logo" src={logo}></img>
-        <h1 className="title">{data.homepage.intro.title}</h1>
+        <h1>The Rivalry</h1>
+        <h2>2020</h2>
+        <img src={tmd_logo}></img>
+        <p>x</p>
+        <img src={lantern_logo}></img>
       </div>
 
-      {/* <div className="button-container">
-        <div className="button-wrapper">
-          <button className="TMD">The Michigan Daily</button>
-          <button className="lantern">The Lantern</button>
-        </div>
-      </div> */}
-
-      <div className="subtitle">
-        <h2>{data.homepage.intro.subtitle}</h2>
-      </div>
-      <div className="paragraph">
-        <p> {data.homepage.intro.paragraph} </p>
-      </div>
+      <i className="fa fa-chevron-circle-down" onClick={scrollClick}></i>
     </>
   );
 };

@@ -10,6 +10,136 @@
   width: 50%;
   object-fit: cover;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.Landing_Page_Image_Ohio {
+  background: linear-gradient(
+      0deg,
+      rgba(187, 0, 0, 0.3),
+      rgba(187, 0, 0, 0.3),
+      rgba(187, 0, 0, 0.3)
+    ),
+    url("../../../images/osu_cover.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.Landing_Page_Image_Michigan {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 203, 5, 0.3),
+      rgba(255, 203, 5, 0.3),
+      rgba(255, 203, 5, 0.3)
+    ),
+    url("https://images.rivals.com/image/upload/f_auto,q_auto/xyl1hw5axp8ndhsuwkt3");
+  background-size: cover;
+}
+
+.logo_title_box {
+  position: absolute;
+  width: 40%;
+  margin-left: 30%;
+  margin-top: -100vh;
+  background-color: white;
+  overflow: hidden;
+  text-align: center;
+  font-size: 50px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.logo_title_box h2 {
+  margin-top: 0;
+  color: gray;
+}
+
+.logo_title_box img {
+  height: 30px;
+}
+
+.logo_title_box p {
+  margin: 0;
+}
+
+.fa-chevron-circle-down {
+  color: white;
+  position: absolute;
+  bottom: 10vh;
+  font-size: 50px;
+  margin-left: calc(50% - 15px);
+  -moz-animation: bounce 3s infinite;
+  -webkit-animation: bounce 3s infinite;
+  animation: bounce 3s infinite;
+}
+.fa-chevron-circle-down:hover {
+  cursor: pointer;
+}
+@-moz-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .fa-chevron-circle-down {
+    bottom: 5vh;
+  }
+  .logo_title_box {
+    width: 60%;
+    margin-left: 20%;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -23,27 +153,30 @@
   }
 }
 
-.logo_title_box {
-  display: flex;
-  width: 50%;
+@media only screen and (max-width: 600px) {
+  .logo_title_box {
+    font-size: 40px;
+    /* height: 70vh; */
+    margin-top: -90vh;
+    padding: 15px;
+  }
 }
 
-.logo,
-.title {
-  flex: 50%;
-  padding: 5px;
+@media only screen and (max-width: 450px) {
+  .logo_title_box {
+    width: 70%;
+    margin-left: 15%;
+    padding: 40px 20px;
+    font-size: 30px;
+  }
+
+  .logo_title_box img {
+    height: 20px;
+  }
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.subtitle {
-  text-align: center;
-}
-
-.paragraph {
-  text-align: center;
+@media only screen and (max-width: 350px) {
+  .logo_title_box {
+    font-size: 25px;
+  }
 }

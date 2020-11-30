@@ -8,7 +8,9 @@ const Tabs = () => {
   }
   return (
     <div className="articleContainer">
-      <p>Text for Introduction</p>
+      <h1>Text for Introduction</h1>
+      <p>Introduction text .......</p>
+      <br />
       <ul className="mainTabs">
         <li
           id="tab1"

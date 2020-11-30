@@ -45,12 +45,46 @@ const ArticleGrid = ({ tabType }) => {
     let osu = getOSUData();
     return interleave(um, osu);
   };
-
+  const getData = () => {
+    if (tabType === "All") {
+      return getAllData();
+    } else if (tabType === "UM") {
+      return getUMData();
+    } else {
+      return getOSUData();
+    }
+  };
+  const getSchoolIntro = () => {
+    if (tabType === "UM") {
+      return (
+        <>
+          <h1>TMD Title</h1>
+          <p>Text</p>
+          <br />
+        </>
+      );
+    } else if (tabType === "OSU") {
+      return (
+        <>
+          <h1>Lantern Title</h1>
+          <p>Text</p>
+          <br />
+        </>
+      );
+    }
+  };
   return (
     <div className="articleContainer">
-      <p>Text for Introduction</p>
-      <p>{tabType}</p>
-      {getAllData().map((d, i) => {
+      {getSchoolIntro()}
+      {getData().map((d, i) => {
+        if (i == 2) {
+          return (
+            <>
+              <p>Donation Box Placeholder</p>
+              <ArticleCard data={d} count={i} />
+            </>
+          );
+        }
         return <ArticleCard data={d} count={i} />;
       })}
     </div>

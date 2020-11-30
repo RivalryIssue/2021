@@ -1,34 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import tmd_logo_black from "./../../images/tmd-logo-black.png";
-import lantern_logo from "./../../images/old-lantern-logo.png";
+import lantern_logo from "./../../images/lanternLogo.png";
 import michigan_image_0 from "./../../images/michigan-card-0.jpg";
 import osu_image_1 from "./../../images/osu-card-1.jpg";
 
 const ArticleCard = ({ data, count }) => {
-  console.log(data);
-  // function getData(data) {
-  //   // console.log(data);
-  //   if (data.type === "description") {
-  //     return (
-  //       <p
-  //         className="article-blurb"
-  //         dangerouslySetInnerHTML={{ __html: data.value }}
-  //       ></p>
-  //     );
-  //   } else if (data.type === "title") {
-  //     return <h1 className="article-title">{data.value}</h1>;
-  //   } else if (data.type === "author") {
-  //     return <div className="article-author">{data.value}</div>;
-  //   }
-  // }
-
-  // let type = data.type;
-  // let article_num = data.num;
-  // let image_link = data.img;
-  // let article_link = data.link;
-  // let article_data = data.article;
-
   let div_class_name = "article-card";
 
   if (count % 2 === 0) {
@@ -52,28 +29,34 @@ const ArticleCard = ({ data, count }) => {
     image_src += "card-" + "1" + ".jpg";
   }
 
-  // image_src += "card-" + count + ".jpg";
-
   return (
-    <div
-      style={{ backgroundImage: "url(" + require(image_src) + ")" }}
-      className={`article-card ${div_class_name} ${div_id}`}
-    >
-      <div className="article-text">
-        <h1 className="article-title">{data.title}</h1>
-        <div className="article-author">{data.author}</div>
-        <p
+    <div className="testWrap">
+      <div
+        style={{ backgroundImage: "url(" + require(image_src) + ")" }}
+        className={`article-card ${div_class_name} ${div_id}`}
+      >
+        <div className="article-text">
+          <a href={`/${data.slug}`} className={`text-link ${div_id}-link`}>
+            <h1 className="article-title">{data.title}</h1>
+          </a>
+          <div className="article-author">{data.author}</div>
+          {/* <p
           className="article-blurb"
           dangerouslySetInnerHTML={{ __html: data.desc }}
-        ></p>
+        ></p> */}
 
-        <img className="card-news-logo" src={logo_src} alt=""></img>
-        <br />
-        <Link to="/article">
-          <button className="article-card-button" onClick="">
-            Read Article
-          </button>
-        </Link>
+          <img className="card-news-logo" src={logo_src} alt=""></img>
+          <br />
+          <Link to={`/${data.slug}`}>
+            <button
+              className="article-card-button"
+              onClick=""
+              title={data.desc}
+            >
+              Read Article
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
