@@ -91,3 +91,24 @@ h1 {
   padding: 20px;
   background-color: #ff0000;
 }
+
+/* @media only screen and (max-width: 850px) {
+  .article-card {
+
+  }
+} */
+
+@media only screen and (max-width: 550px) {
+  .article-title {
+    font-size: 35px;
+  }
+  .article-author {
+    font-size: 20px;
+  }
+  .article-paragraph {
+    font-size: 15px;
+  }
+  .article-container {
+    width: 80%;
+  }
+}
