@@ -19,9 +19,13 @@ const Landing_Page = ({ data }) => {
       <div className="logo_title_box">
         <h1>The Rivalry</h1>
         <h2>2020</h2>
-        <img src={tmd_logo}></img>
+        <a href="https://michigandaily.com" target="_blank">
+          <img src={tmd_logo}></img>
+        </a>
         <p>x</p>
-        <img src={lantern_logo}></img>
+        <a href="https://thelantern.com" target="_blank">
+          <img src={lantern_logo}></img>
+        </a>
       </div>
 
       <i className="fa fa-chevron-circle-down" onClick={scrollClick}></i>

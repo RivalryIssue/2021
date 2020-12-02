@@ -1,7 +1,21 @@
 import React from "react";
 import "./Article.css";
+import { Helmet } from "react-helmet";
+import tmd from "../../../images/tmd-logo-black.png";
+import lantern from "../../../images/lanternLogo.png";
 
-const Article = ({ data }) => {
+const Article = ({ data, school }) => {
+  let img =
+    "https://images.rivals.com/image/upload/f_auto,q_auto/xyl1hw5axp8ndhsuwkt3";
+  data.forEach((e) => {
+    if (e.type === "img") {
+      img = e.value;
+    }
+  });
+  function returnHome(e) {
+    e.preventDefault();
+    window.location.href = "http://therivalrygame.com";
+  }
   function getData(data) {
     if (data.type === "text") {
       return (
@@ -11,18 +25,67 @@ const Article = ({ data }) => {
         ></p>
       );
     } else if (data.type === "title") {
-      return <h1 className="article-title">{data.value}</h1>;
+      return (
+        <>
+          <h1 className="article-title">{data.value}</h1>
+          <Helmet>
+            <title>Rivalry: {data.value}</title>
+            <meta property="og:title" content={`Rivalry: ${data.value}`} />
+          </Helmet>
+        </>
+      );
     } else if (data.type === "author") {
-      return <h1 className="article-author">{data.value}</h1>;
+      return (
+        <>
+          <h1 className="article-author">{data.value}</h1>
+          <a
+            href={
+              school === "osu"
+                ? "https://thelantern.com"
+                : "https://michigandaily.com"
+            }
+            target="_blank"
+          >
+            <img
+              className="logo-news-image"
+              src={school === "osu" ? lantern : tmd}
+            />
+          </a>
+        </>
+      );
+    } else if (data.type === "description") {
+      return (
+        <Helmet>
+          <meta property="og:description" content={data.value} />
+          <meta name="description" content={data.value} />
+        </Helmet>
+      );
+    } else if (data.type === "img") {
+      return (
+        <Helmet>
+          <meta property="og:image" content={data.value} />
+        </Helmet>
+      );
+    } else if (data.type === "slug") {
+      return (
+        <Helmet>
+          <meta
+            property="og:url"
+            content={`https://therivalrygame.com/${data.value}`}
+          />
+        </Helmet>
+      );
     }
   }
   return (
     <>
       <div className="article-landing-page">
-        <img
-          className="article-image"
-          src="https://images.rivals.com/image/upload/f_auto,q_auto/xyl1hw5axp8ndhsuwkt3"
-        />
+        <img className="article-image" src={img} />
+        <div className="return-button">
+          <button className="home-button" onClick={returnHome}>
+            Return Home
+          </button>
+        </div>
       </div>
       <div className="article-container">
         {/* Check out ../../css/base.scss for base styling! */}
@@ -30,12 +93,9 @@ const Article = ({ data }) => {
           return getData(data);
         })}
       </div>
-      <button className="home-button">Return Home</button>
-      <div className="article-footer">
-        <p className="donate-text">Support the Daily!</p>
-        <button className="donate-button">Click to donate</button>
-        <div className="dontate-flair" />
-      </div>
+      <button className="home-button" onClick={returnHome}>
+        Return Home
+      </button>
     </>
   );
 };

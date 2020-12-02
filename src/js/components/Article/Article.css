@@ -18,6 +18,13 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
+}
+
+.logo-news-image {
+  height: 20px;
+  margin-bottom: 8%;
+  margin-top: 1%;
 }
 
 .article-title {
@@ -31,7 +38,6 @@ h1 {
   font-size: max(2em, 2.1vw);
   font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  margin-bottom: 8%;
 }
 
 .article-paragraph {
@@ -53,9 +59,20 @@ h1 {
   padding: 20px;
   width: 200px;
   justify-content: center;
-  border: none;
+  border: 2px solid black;
+  transition-duration: 0.2s;
 }
 
+.home-button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+.return-button {
+  top: 0;
+  position: absolute;
+}
 .article-footer {
   display: flex;
   flex-direction: column;
@@ -110,5 +127,8 @@ h1 {
   }
   .article-container {
     width: 80%;
+  }
+  .article-landing-page {
+    height: 30vh;
   }
 }

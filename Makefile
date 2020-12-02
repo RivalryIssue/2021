@@ -23,6 +23,8 @@ build: auth.json fetch
 	yarn run build
 	cp template/404.html dist
 	cp template/CNAME dist
+	cp template/socialcard.png dist
+	cp -r src/images/mi-cover-img dist
 
 push:
 	git add .

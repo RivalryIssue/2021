@@ -1,9 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import tmd_logo_black from "./../../images/tmd-logo-black.png";
 import lantern_logo from "./../../images/lanternLogo.png";
-import michigan_image_0 from "./../../images/michigan-card-0.jpg";
-import osu_image_1 from "./../../images/osu-card-1.jpg";
 
 const ArticleCard = ({ data, count }) => {
   let div_class_name = "article-card";
@@ -16,23 +13,19 @@ const ArticleCard = ({ data, count }) => {
 
   let div_id = "";
   let logo_src;
-  let image_src = "./../../images/";
+  // let image_src = data.img;
   if (data.school === "UM") {
     div_id += "michigan-card";
     logo_src = tmd_logo_black; //daily logo
-    image_src += "michigan-";
-    image_src += "card-" + "0" + ".jpg";
   } else {
     div_id += "osu-card";
     logo_src = lantern_logo; //lantern logo
-    image_src += "osu-";
-    image_src += "card-" + "1" + ".jpg";
   }
 
   return (
     <div className="testWrap">
       <div
-        style={{ backgroundImage: "url(" + require(image_src) + ")" }}
+        style={{ backgroundImage: "url(" + data.img + ")" }}
         className={`article-card ${div_class_name} ${div_id}`}
       >
         <div className="article-text">
@@ -44,10 +37,9 @@ const ArticleCard = ({ data, count }) => {
           className="article-blurb"
           dangerouslySetInnerHTML={{ __html: data.desc }}
         ></p> */}
-
           <img className="card-news-logo" src={logo_src} alt=""></img>
           <br />
-          <Link to={`/${data.slug}`}>
+          <a href={`/${data.slug}`}>
             <button
               className="article-card-button"
               onClick=""
@@ -55,7 +47,7 @@ const ArticleCard = ({ data, count }) => {
             >
               Read Article
             </button>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

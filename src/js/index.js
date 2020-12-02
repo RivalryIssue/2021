@@ -5,6 +5,7 @@ import Main from "./components/Main";
 import Article from "./components/Article/Article";
 import Landing_Page from "./components/Landing_Page/Landing_Page";
 import Tabs from "./components/Tabs";
+import Footer from "./components/Footer";
 import data from "../../template/copy.json";
 
 window.onload = function () {
@@ -16,15 +17,27 @@ export default function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/article">
-          <Article data={data.michigan[0].value} />
-        </Route>
+        {data.lantern.map((d) => {
+          return (
+            <Route path={`/${d.value[0].value}`}>
+              <Article data={d.value} school="osu" />
+            </Route>
+          );
+        })}
+        {data.michigan.map((d) => {
+          return (
+            <Route path={`/${d.value[0].value}`}>
+              <Article data={d.value} school="um" />
+            </Route>
+          );
+        })}
         <Route path="/">
           <Main />
           <Landing_Page data={data} />
           <Tabs />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }
