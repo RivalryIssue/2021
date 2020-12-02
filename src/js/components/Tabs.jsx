@@ -2,7 +2,16 @@ import React, { useState } from "react";
 import ArticleGrid from "./ArticleGrid";
 
 const Tabs = () => {
-  var [activeId, setActive] = useState("tab1");
+  if (window.location.hash) {
+    var hash = window.location.hash.substring(1);
+    if (hash === "osu") {
+      var [activeId, setActive] = useState("tab3");
+    } else {
+      var [activeId, setActive] = useState("tab2");
+    }
+  } else {
+    var [activeId, setActive] = useState("tab1");
+  }
   function tabClick(e) {
     setActive(e.target.id);
   }

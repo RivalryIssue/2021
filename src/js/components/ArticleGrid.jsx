@@ -71,6 +71,14 @@ const ArticleGrid = ({ tabType }) => {
             you're a Buckeye or a Wolverine, please consider donating to support
             award-winning student journalism.
           </p>
+          <div className="player-wrapper">
+            <ReactPlayer
+              url="https://youtu.be/XIst3PS1k_8"
+              width="90%"
+              height="90%"
+              className="react-player"
+            />
+          </div>
           <br />
           <a
             href="https://give.communityfunded.com/o/university-of-michigan/i/giving-tuesday/s/tmd-lantern-rivalry"
@@ -110,11 +118,6 @@ const ArticleGrid = ({ tabType }) => {
           >
             <img src={tmd}></img>
           </a>
-          <ReactPlayer
-            url="https://youtu.be/XIst3PS1k_8"
-            width="100%"
-            className="video"
-          />
         </>
       );
     } else if (tabType === "OSU") {
@@ -137,15 +140,18 @@ const ArticleGrid = ({ tabType }) => {
             </a>
             :
           </p>
+          <div className="player-wrapper">
+            <ReactPlayer
+              url="https://youtu.be/l6onCd7v61I"
+              width="90%"
+              height="90%"
+              className="react-player"
+            />
+          </div>
           <br />
           <a href="https://buckeyefunder.osu.edu/project/21918" target="_blank">
             <img src={lantern}></img>
           </a>
-          <ReactPlayer
-            url="https://youtu.be/l6onCd7v61I"
-            width="100%"
-            className="video"
-          />
         </>
       );
     }

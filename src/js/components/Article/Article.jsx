@@ -82,8 +82,8 @@ const Article = ({ data, school }) => {
       <div className="article-landing-page">
         <img className="article-image" src={img} />
         <div className="return-button">
-          <button className="home-button" onClick={returnHome}>
-            Return Home
+          <button className="home-button menu-button" onClick={returnHome}>
+            Home
           </button>
         </div>
       </div>
