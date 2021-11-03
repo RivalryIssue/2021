@@ -15,29 +15,10 @@ window.onload = function () {
 
 export default function App() {
   return (
-    <Router>
-      <Switch>
-        {data.lantern.map((d) => {
-          return (
-            <Route path={`/${d.value[0].value}`}>
-              <Article data={d.value} school="osu" />
-            </Route>
-          );
-        })}
-        {data.michigan.map((d) => {
-          return (
-            <Route path={`/${d.value[0].value}`}>
-              <Article data={d.value} school="um" />
-            </Route>
-          );
-        })}
-        <Route path="/">
-          <Main />
-          <Landing_Page data={data} />
-          <Tabs />
-        </Route>
-      </Switch>
-      <Footer />
-    </Router>
+    <>
+      <Main />
+      <Landing_Page data={data} />
+      <Tabs />
+    </>
   );
 }

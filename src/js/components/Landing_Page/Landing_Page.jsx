@@ -22,7 +22,7 @@ const Landing_Page = ({ data }) => {
         <a href="https://michigandaily.com" target="_blank">
           <img src={tmd_logo}></img>
         </a>
-        <p>x</p>
+        <p>&#10006;</p>
         <a href="https://thelantern.com" target="_blank">
           <img src={lantern_logo}></img>
         </a>
