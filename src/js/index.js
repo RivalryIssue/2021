@@ -6,6 +6,7 @@ import Article from "./components/Article/Article";
 import Landing_Page from "./components/Landing_Page/Landing_Page";
 import Tabs from "./components/Tabs";
 import Footer from "./components/Footer";
+import DonationGraphic from "./components/DonationGraphic";
 import data from "../../template/copy.json";
 
 window.onload = function () {
@@ -34,6 +35,7 @@ export default function App() {
         <Route path="/">
           <Main />
           <Landing_Page data={data} />
+          <DonationGraphic />
           <Tabs />
         </Route>
       </Switch>
