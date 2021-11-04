@@ -4,23 +4,23 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="top-bar">
-        <ul class="social-icons">
+        <ul className="social-icons">
           <li>
             <a
               href="https://www.facebook.com/sharer/sharer.php?u=https://therivalrygame.com/"
-              class="social-icon"
+              className="social-icon"
             >
               {" "}
-              <i class="fa fa-facebook"></i>
+              <i className="fa fa-facebook"></i>
             </a>
           </li>
           <li>
             <a
               href="https://twitter.com/intent/tweet?url=https://therivalrygame.com/"
-              class="social-icon"
+              className="social-icon"
             >
               {" "}
-              <i class="fa fa-twitter"></i>
+              <i className="fa fa-twitter"></i>
             </a>
           </li>
         </ul>
