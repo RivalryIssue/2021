@@ -15,48 +15,22 @@ const ArticleGrid = ({ tabType }) => {
       }, [])
       .concat((a.length > min ? a : b).slice(min));
   };
-  const getUMData = () => {
-    let results = [];
-    data.michigan.map((d) => {
-      let temp = {};
-      temp["school"] = "UM";
-      temp["title"] = d.value[1].value;
-      temp["author"] = d.value[2].value;
-      temp["desc"] = d.value[3].value;
-      temp["date"] = d.value[4].value;
-      temp["slug"] = d.value[0].value;
-      temp["img"] = d.value[5].value;
-      results.push(temp);
-    });
-    return results;
-  };
-  const getOSUData = () => {
-    let results = [];
-    data.lantern.map((d) => {
-      let temp = {};
-      temp["school"] = "OSU";
-      temp["title"] = d.value[1].value;
-      temp["author"] = d.value[2].value;
-      temp["desc"] = d.value[3].value;
-      temp["date"] = d.value[4].value;
-      temp["slug"] = d.value[0].value;
-      temp["img"] = d.value[5].value;
-      results.push(temp);
-    });
-    return results;
-  };
   const getAllData = () => {
-    let um = getUMData();
-    let osu = getOSUData();
+    let um = data.michigan.articles.map((a) => {
+      return { ...a, school: "UM" };
+    });
+    let osu = data.ohio.articles.map((a) => {
+      return { ...a, school: "OSU" };
+    });
     return interleave(um, osu);
   };
   const getData = () => {
     if (tabType === "All") {
       return getAllData();
     } else if (tabType === "UM") {
-      return getUMData();
+      return data.michigan.articles;
     } else {
-      return getOSUData();
+      return data.ohio.articles;
     }
   };
   const getSchoolIntro = () => {
@@ -159,9 +133,11 @@ const ArticleGrid = ({ tabType }) => {
   return (
     <div className="articleContainer">
       <div className="schoolIntro">{getSchoolIntro()}</div>
-      {getData().map((d, i) => {
-        return <ArticleCard data={d} count={i} />;
-      })}
+      <div className="allArticles">
+        {getData().map((d, i) => {
+          return <ArticleCard data={d} count={i} />;
+        })}
+      </div>
     </div>
   );
 };

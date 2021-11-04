@@ -5,19 +5,15 @@ import lantern_logo from "./../../images/lanternLogo.png";
 const ArticleCard = ({ data, count }) => {
   let div_class_name = "article-card";
 
-  if (count % 2 === 0) {
-    div_class_name = "right-" + div_class_name;
-  } else {
-    div_class_name = "left-" + div_class_name;
-  }
-
   let div_id = "";
   let logo_src;
   // let image_src = data.img;
   if (data.school === "UM") {
+    div_class_name = "right-" + div_class_name;
     div_id += "michigan-card";
     logo_src = tmd_logo_black; //daily logo
   } else {
+    div_class_name = "left-" + div_class_name;
     div_id += "osu-card";
     logo_src = lantern_logo; //lantern logo
   }
@@ -39,7 +35,7 @@ const ArticleCard = ({ data, count }) => {
         ></p> */}
           <img className="card-news-logo" src={logo_src} alt=""></img>
           <br />
-          <a href={`/${data.slug}`}>
+          <a href={`/${data.link}`}>
             <button
               className="article-card-button"
               onClick=""
