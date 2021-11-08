@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import tmd from "../../images/tmd-donate.jpg";
+import lantern from "../../images/lantern-donate.jpg";
 
 export default function DonationGraphic() {
   const [lanternMoney, setLanternMoney] = useState("");
@@ -53,10 +55,17 @@ export default function DonationGraphic() {
 
       <div className="buttons-container">
         <div className="donation-button">
-          <p className="text">Donate to the Michigan Daily!</p>
+          <a
+            href="https://give.communityfunded.com/o/university-of-michigan/i/giving-tuesday/s/tmd-lantern-rivalry"
+            target="_blank"
+          >
+            <img src={tmd} />
+          </a>
         </div>
         <div className="donation-button">
-          <p className="text">Donate to the Lantern!</p>
+          <a href="https://buckeyefunder.osu.edu/project/21918" target="_blank">
+            <img src={lantern} />
+          </a>
         </div>
       </div>
     </div>
