@@ -69,59 +69,6 @@ body {
   color: #81b3d2;
 }
 
-.mainTabs {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: table;
-  width: 100%;
-  text-align: center;
-
-  li {
-    color: gray;
-    font-size: 20px;
-    display: inline-block;
-    padding: 15px 30px;
-    position: relative;
-  }
-  li:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: gray;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-  }
-  li:hover:after,
-  li:focus:after {
-    width: 80%;
-    left: 10%;
-  }
-  li:hover,
-  li:focus {
-    cursor: pointer;
-  }
-
-  .activeTab {
-    color: black;
-  }
-  .activeTab:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 10;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 10%;
-    position: absolute;
-    background: black;
-    width: 80%;
-  }
-}
-
 .testWrap {
   overflow: hidden;
   width: 50%;
@@ -164,8 +111,8 @@ body {
   position: relative;
 
   .article-text {
-    background-color: #e5e5e5e5;
-    width: 40%;
+    background-color: #e5e5e5c5;
+    width: 60%;
     height: auto;
     max-height: 60vh;
     padding: 40px;
@@ -176,7 +123,7 @@ body {
   }
 
   .article-title {
-    font-size: 50px;
+    font-size: 35px;
     pointer-events: auto;
   }
   .article-author {
