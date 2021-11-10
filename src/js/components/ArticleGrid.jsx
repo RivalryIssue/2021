@@ -24,20 +24,10 @@ const ArticleGrid = () => {
     });
     return interleave(um, osu);
   };
-  const getData = () => {
-    return getAllData();
-  };
   const getSchoolIntro = () => {
     return (
       <>
-        <p>
-          For the second year, The Michigan Daily and The Ohio State Lantern are
-          producing a joint publication with stories about our schools' historic
-          football rivalry. We're launching this work alongside a competitive
-          fundraiser to help us cover our operating costs. Whether you're a
-          Buckeye or a Wolverine, please consider donating to support
-          award-winning student journalism.
-        </p>
+        <div className="intro-desc">{data.homepage.description}</div>
         <div className="player-wrapper">
           <ReactPlayer
             url="https://youtu.be/XIst3PS1k_8"
@@ -63,7 +53,7 @@ const ArticleGrid = () => {
     <div className="articleContainer">
       <div className="schoolIntro">{getSchoolIntro()}</div>
       <div className="allArticles">
-        {getData().map((d, i) => {
+        {getAllData().map((d, i) => {
           return <ArticleCard data={d} count={i} />;
         })}
       </div>
