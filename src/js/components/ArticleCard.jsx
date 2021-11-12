@@ -25,7 +25,7 @@ const ArticleCard = ({ data, count }) => {
         className={`article-card ${div_class_name} ${div_id}`}
       >
         <div className="article-text">
-          <a href={`/${data.slug}`} className={`text-link ${div_id}-link`}>
+          <a href={data.link} className={`text-link ${div_id}-link`}>
             <h1 className="article-title">{data.title}</h1>
           </a>
           <div className="article-author">{data.author}</div>
@@ -35,11 +35,11 @@ const ArticleCard = ({ data, count }) => {
         ></p> */}
           <img className="card-news-logo" src={logo_src} alt=""></img>
           <br />
-          <a href={`/${data.link}`}>
+          <a href={data.link}>
             <button
               className="article-card-button"
               onClick=""
-              title={data.desc}
+              title={data.link}
             >
               Read Article
             </button>
