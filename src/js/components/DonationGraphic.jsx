@@ -30,14 +30,14 @@ export default function DonationGraphic() {
   useEffect(() => {
     updateProgressBar(lanternMoney, "lanternProgress");
     updateProgressBar(dailyMoney, "dailyProgress");
-  }, [lanternMoney]);
+  }, [lanternMoney, dailyMoney]);
 
   return (
     <div className="graphic-container">
       <h2 className="graphic-title">Current Status</h2>
       <div className="donation_container">
         <h2 className="donation_title">The Michigan Daily</h2>
-        <div className="progess_container">
+        <div className="progress_container">
           <div className="progress">
             <div
               id="dailyProgress"
@@ -50,7 +50,7 @@ export default function DonationGraphic() {
       </div>
       <div className="donation_container">
         <h2 className="donation_title">The Lantern</h2>
-        <div className="progess_container">
+        <div className="progress_container">
           <div className="progress">
             <div id="lanternProgress" className="progress__bar"></div>
           </div>
