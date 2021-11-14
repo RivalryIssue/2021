@@ -7,8 +7,7 @@ export default function DonationGraphic() {
   const [dailyMoney, setDailyMoney] = useState("");
 
   const updateProgressBar = (value, elt) => {
-    let str_array = value.slice(1).split(",");
-    let str = str_array[0] + str_array[1];
+    let str = value.slice(1).replaceAll(",", "");
     value = Number(str) / 100;
     let progressbar = document.getElementById(elt);
     value = Math.min(value, 100);
