@@ -18,11 +18,11 @@ const Landing_Page = ({ data }) => {
 
       <div className="logo_title_box">
         <h1>The Rivalry</h1>
-        <h2>2020</h2>
+        <h2>2021</h2>
         <a href="https://michigandaily.com" target="_blank">
           <img src={tmd_logo}></img>
         </a>
-        <p>x</p>
+        <p>&#10006;</p>
         <a href="https://thelantern.com" target="_blank">
           <img src={lantern_logo}></img>
         </a>

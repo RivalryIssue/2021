@@ -69,61 +69,15 @@ body {
   color: #81b3d2;
 }
 
-.mainTabs {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: table;
-  width: 100%;
-  text-align: center;
-
-  li {
-    color: gray;
-    font-size: 20px;
-    display: inline-block;
-    padding: 15px 30px;
-    position: relative;
-  }
-  li:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: gray;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-  }
-  li:hover:after,
-  li:focus:after {
-    width: 80%;
-    left: 10%;
-  }
-  li:hover,
-  li:focus {
-    cursor: pointer;
-  }
-
-  .activeTab {
-    color: black;
-  }
-  .activeTab:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 10;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 10%;
-    position: absolute;
-    background: black;
-    width: 80%;
-  }
-}
-
 .testWrap {
   overflow: hidden;
+  width: 50%;
+}
+
+.intro-desc {
+  font-size: 25px;
+  margin: 30px 0px;
+  text-align: left;
 }
 
 .schoolIntro {
@@ -144,6 +98,11 @@ body {
   }
 }
 
+.allArticles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .article-card {
   width: 100%;
   height: 80vh;
@@ -158,8 +117,8 @@ body {
   position: relative;
 
   .article-text {
-    background-color: #e5e5e5e5;
-    width: 40%;
+    background-color: #e5e5e5c5;
+    width: 60%;
     height: auto;
     max-height: 60vh;
     padding: 40px;
@@ -170,7 +129,7 @@ body {
   }
 
   .article-title {
-    font-size: 50px;
+    font-size: 35px;
     pointer-events: auto;
   }
   .article-author {
@@ -221,20 +180,6 @@ body {
   .card-news-logo {
     right: 0;
   }
-}
-
-.article-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: inherit;
-  transition: inherit;
-}
-.article-card:hover::before {
-  transform: scale(1.1);
 }
 
 .michigan-card {
@@ -410,6 +355,7 @@ submit {
   align-items: center;
   width: 100%;
   padding: auto;
+  padding-left: 20px;
 }
 
 .progress .progress__bar {
@@ -492,6 +438,9 @@ submit {
   .donation_amount {
     margin-bottom: 15px;
   }
+  .testWrap {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 550px) {
@@ -531,6 +480,9 @@ submit {
   }
   .donation_amount {
     margin-bottom: 15px;
+  }
+  .intro-desc {
+    font-size: 18px;
   }
 }
 

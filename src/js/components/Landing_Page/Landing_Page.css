@@ -46,7 +46,7 @@
   background-color: white;
   overflow: hidden;
   text-align: center;
-  font-size: 50px;
+  font-size: 45px;
   padding: 50px;
   box-sizing: border-box;
 }
@@ -57,7 +57,7 @@
 }
 
 .logo_title_box img {
-  height: 30px;
+  height: 40px;
 }
 
 .logo_title_box p {
@@ -67,7 +67,7 @@
 .fa-chevron-circle-down {
   color: white;
   position: absolute;
-  bottom: 10vh;
+  bottom: 3vh;
   font-size: 50px;
   margin-left: calc(50% - 18px);
   -moz-animation: bounce 3s infinite;
