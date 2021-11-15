@@ -7,6 +7,7 @@ import Landing_Page from "./components/Landing_Page/Landing_Page";
 import Footer from "./components/Footer";
 import data from "../../template/copy.json";
 import ArticleGrid from "./components/ArticleGrid";
+import DonationGraphic from "./components/DonationGraphic";
 
 window.onload = function () {
   var mountNode = document.getElementById("app");
@@ -18,6 +19,7 @@ export default function App() {
     <>
       <Main />
       <Landing_Page data={data} />
+      <DonationGraphic />
       <ArticleGrid />
     </>
   );
