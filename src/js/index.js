@@ -8,6 +8,9 @@ import Footer from "./components/Footer";
 import data from "../../template/copy.json";
 import ArticleGrid from "./components/ArticleGrid";
 import DonationGraphic from "./components/DonationGraphic";
+import SchoolIntro from "./components/SchoolIntro";
+import Intro from "./components/Intro";
+import Tabs from "./components/Tabs";
 
 window.onload = function () {
   var mountNode = document.getElementById("app");
@@ -19,7 +22,9 @@ export default function App() {
     <>
       <Main />
       <Landing_Page data={data} />
+      <Intro />
       <DonationGraphic />
+      <Tabs />
       <ArticleGrid />
     </>
   );

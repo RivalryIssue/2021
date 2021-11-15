@@ -34,9 +34,16 @@ export default function DonationGraphic() {
 
   return (
     <div className="graphic-container">
-      <h2 className="graphic-title">Current Status</h2>
       <div className="donation_container">
-        <h2 className="donation_title">The Michigan Daily</h2>
+        <h2 className="donation_title">
+          <a
+            className="daily"
+            href="https://maizeraise.umich.edu/o/university-of-michigan/i/maizeraise/s/tmd-lantern-rivalry"
+            target="_blank"
+          >
+            The Michigan Daily >
+          </a>
+        </h2>
         <div className="progress_container">
           <div className="progress">
             <div
@@ -49,7 +56,15 @@ export default function DonationGraphic() {
         </div>
       </div>
       <div className="donation_container">
-        <h2 className="donation_title">The Lantern</h2>
+        <h2 className="donation_title">
+          <a
+            className="ohio"
+            href="https://buckeyefunder.osu.edu/project/28518"
+            target="_blank"
+          >
+            The Lantern >
+          </a>
+        </h2>
         <div className="progress_container">
           <div className="progress">
             <div id="lanternProgress" className="progress__bar"></div>
@@ -58,21 +73,21 @@ export default function DonationGraphic() {
         </div>
       </div>
 
-      {/* <div className="buttons-container">
+      <div className="buttons-container">
         <div className="donation-button">
           <a
-            href="https://give.communityfunded.com/o/university-of-michigan/i/giving-tuesday/s/tmd-lantern-rivalry"
+            href="https://maizeraise.umich.edu/o/university-of-michigan/i/maizeraise/s/tmd-lantern-rivalry"
             target="_blank"
           >
             <img src={tmd} />
           </a>
         </div>
         <div className="donation-button">
-          <a href="https://buckeyefunder.osu.edu/project/21918" target="_blank">
+          <a href="https://buckeyefunder.osu.edu/project/28518" target="_blank">
             <img src={lantern} />
           </a>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

@@ -1,9 +1,6 @@
 import React from "react";
 import ArticleCard from "./ArticleCard";
 import data from "../../../template/copy.json";
-import tmd from "../../images/tmd-donate.jpg";
-import lantern from "../../images/lantern-donate.jpg";
-import ReactPlayer from "react-player";
 
 const ArticleGrid = () => {
   const interleave = (a, b) => {
@@ -24,34 +21,8 @@ const ArticleGrid = () => {
     });
     return interleave(um, osu);
   };
-  const getSchoolIntro = () => {
-    return (
-      <>
-        <div className="intro-desc">{data.homepage.description}</div>
-        <div className="player-wrapper">
-          <ReactPlayer
-            url="https://youtu.be/XIst3PS1k_8"
-            width="90%"
-            height="90%"
-            className="react-player"
-          />
-        </div>
-        <br />
-        <a
-          href="https://give.communityfunded.com/o/university-of-michigan/i/giving-tuesday/s/tmd-lantern-rivalry"
-          target="_blank"
-        >
-          <img src={tmd}></img>
-        </a>
-        <a href="https://buckeyefunder.osu.edu/project/21918" target="_blank">
-          <img src={lantern}></img>
-        </a>
-      </>
-    );
-  };
   return (
     <div className="articleContainer">
-      <div className="schoolIntro">{getSchoolIntro()}</div>
       <div className="allArticles">
         {getAllData().map((d, i) => {
           return <ArticleCard data={d} count={i} />;
