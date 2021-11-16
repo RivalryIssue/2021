@@ -45,7 +45,7 @@ export default function DonationGraphic() {
             href="https://maizeraise.umich.edu/o/university-of-michigan/i/maizeraise/s/tmd-lantern-rivalry"
             target="_blank"
           >
-            The Michigan Daily:
+            The Michigan Daily >
           </a>
         </h2>
         <div className="progress_container">
@@ -66,7 +66,7 @@ export default function DonationGraphic() {
             href="https://buckeyefunder.osu.edu/project/28518"
             target="_blank"
           >
-            The Lantern:
+            The Lantern >
           </a>
         </h2>
         <div className="progress_container">
