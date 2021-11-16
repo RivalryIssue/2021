@@ -22,8 +22,12 @@ export default function DonationGraphic() {
     )
       .then((response) => response.json())
       .then((result) => {
-        setLanternMoney(result.data.lantern);
-        setDailyMoney(result.data.daily);
+        let LanternNum = Number(
+          result.data.lantern.slice(1).replaceAll(",", "")
+        );
+        setLanternMoney("$" + LanternNum.toLocaleString("en-US"));
+        let DailyNum = Number(result.data.daily.slice(1).replaceAll(",", ""));
+        setDailyMoney("$" + DailyNum.toLocaleString("en-US"));
       });
   }, []);
 
@@ -41,7 +45,7 @@ export default function DonationGraphic() {
             href="https://maizeraise.umich.edu/o/university-of-michigan/i/maizeraise/s/tmd-lantern-rivalry"
             target="_blank"
           >
-            The Michigan Daily >
+            The Michigan Daily:
           </a>
         </h2>
         <div className="progress_container">
@@ -62,7 +66,7 @@ export default function DonationGraphic() {
             href="https://buckeyefunder.osu.edu/project/28518"
             target="_blank"
           >
-            The Lantern >
+            The Lantern:
           </a>
         </h2>
         <div className="progress_container">
