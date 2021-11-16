@@ -22,8 +22,12 @@ export default function DonationGraphic() {
     )
       .then((response) => response.json())
       .then((result) => {
-        setLanternMoney(result.data.lantern);
-        setDailyMoney(result.data.daily);
+        let LanternNum = Number(
+          result.data.lantern.slice(1).replaceAll(",", "")
+        );
+        setLanternMoney("$" + LanternNum.toLocaleString("en-US"));
+        let DailyNum = Number(result.data.daily.slice(1).replaceAll(",", ""));
+        setDailyMoney("$" + DailyNum.toLocaleString("en-US"));
       });
   }, []);
 
