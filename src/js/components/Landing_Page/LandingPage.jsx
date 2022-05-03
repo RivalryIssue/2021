@@ -4,11 +4,12 @@ import Scroll from "react-scroll";
 import tmdLogo from "../../../images/tmd-logo-black.png";
 import lanternLogo from "../../../images/lanternLogo.png";
 
-const LandingPage = ({ data }) => {
+const LandingPage = () => {
   const scroll = Scroll.animateScroll;
   function scrollClick() {
     scroll.scrollTo(window.innerHeight, { smooth: true });
   }
+
   return (
     <>
       <div className="landing-page">
@@ -20,11 +21,11 @@ const LandingPage = ({ data }) => {
         <h1>The Rivalry</h1>
         <h2>2021</h2>
         <a href="https://michigandaily.com" target="_blank" rel="noreferrer">
-          <img src={tmdLogo} alt="The Michigan Daily logo"/>
+          <img src={tmdLogo} alt="The Michigan Daily logo" />
         </a>
         <p>&#10006;</p>
         <a href="https://thelantern.com" target="_blank" rel="noreferrer">
-          <img src={lanternLogo} alt="The Lantern logo"/>
+          <img src={lanternLogo} alt="The Lantern logo" />
         </a>
       </div>
 

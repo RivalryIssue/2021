@@ -22,9 +22,9 @@ const Article = ({ data, school }) => {
         <p
           className="article-paragraph"
           dangerouslySetInnerHTML={{ __html: data.value }}
-        ></p>
+         />
       );
-    } else if (data.type === "title") {
+    } if (data.type === "title") {
       return (
         <>
           <h1 className="article-title">{data.value}</h1>
@@ -34,7 +34,7 @@ const Article = ({ data, school }) => {
           </Helmet>
         </>
       );
-    } else if (data.type === "author") {
+    } if (data.type === "author") {
       return (
         <>
           <h1 className="article-author">{data.value}</h1>
@@ -44,7 +44,7 @@ const Article = ({ data, school }) => {
                 ? "https://thelantern.com"
                 : "https://michigandaily.com"
             }
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             <img
               className="logo-news-image"
@@ -53,20 +53,20 @@ const Article = ({ data, school }) => {
           </a>
         </>
       );
-    } else if (data.type === "description") {
+    } if (data.type === "description") {
       return (
         <Helmet>
           <meta property="og:description" content={data.value} />
           <meta name="description" content={data.value} />
         </Helmet>
       );
-    } else if (data.type === "img") {
+    } if (data.type === "img") {
       return (
         <Helmet>
           <meta property="og:image" content={data.value} />
         </Helmet>
       );
-    } else if (data.type === "slug") {
+    } if (data.type === "slug") {
       return (
         <Helmet>
           <meta
@@ -82,18 +82,16 @@ const Article = ({ data, school }) => {
       <div className="article-landing-page">
         <img className="article-image" src={img} />
         <div className="return-button">
-          <button className="home-button menu-button" onClick={returnHome}>
+          <button className="home-button menu-button" onClick={returnHome} type="button">
             Home
           </button>
         </div>
       </div>
       <div className="article-container">
         {/* Check out ../../css/base.scss for base styling! */}
-        {data.map((data) => {
-          return getData(data);
-        })}
+        {data.map((data) => getData(data))}
       </div>
-      <button className="home-button" onClick={returnHome}>
+      <button className="home-button" onClick={returnHome} type="button">
         Return Home
       </button>
     </>
