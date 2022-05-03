@@ -1,4 +1,4 @@
-{# This is a template #}
+{# Template #}
 <!DOCTYPE html>
 <html>
   <head>
@@ -88,12 +88,12 @@
       })(window.location);
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
-    <script src="js/index.js" charset="utf-8"></script>
+    <script src="js/index.js" charset="utf-8" type="module"></script>
     {% if env == "production" %} {% if config.ga_id %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-BLVSNREB3V"
+      src="https://www.googletagmanager.com/gtag/js?id={{ config.ga_id }}"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];

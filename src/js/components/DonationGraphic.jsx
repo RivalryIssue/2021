@@ -2,15 +2,14 @@ import React, { useState, useEffect } from "react";
 import tmd from "../../images/tmd-donate.jpg";
 import lantern from "../../images/lantern-donate.jpg";
 
-export default function DonationGraphic() {
+const DonationGraphic = () => {
   const [lanternMoney, setLanternMoney] = useState("");
   const [dailyMoney, setDailyMoney] = useState("");
 
   const updateProgressBar = (value, elt) => {
     let str = value.slice(1).replaceAll(",", "");
-    value = Number(str) / 100;
+    value = Math.min(Number(str) / 100, 100);
     let progressbar = document.getElementById(elt);
-    value = Math.min(value, 100);
     if (value >= 0 && value <= 100) {
       progressbar.style.width = value + "%";
     }
@@ -22,12 +21,12 @@ export default function DonationGraphic() {
     )
       .then((response) => response.json())
       .then((result) => {
-        let LanternNum = Number(
+        const LanternNum = Number(
           result.data.lantern.slice(1).replaceAll(",", "")
         );
-        setLanternMoney("$" + LanternNum.toLocaleString("en-US"));
-        let DailyNum = Number(result.data.daily.slice(1).replaceAll(",", ""));
-        setDailyMoney("$" + DailyNum.toLocaleString("en-US"));
+        setLanternMoney(`$${LanternNum.toLocaleString("en-US")}`);
+        const DailyNum = Number(result.data.daily.slice(1).replaceAll(",", ""));
+        setDailyMoney(`$${DailyNum.toLocaleString("en-US")}`);
       });
   }, []);
 
@@ -43,9 +42,9 @@ export default function DonationGraphic() {
           <a
             className="daily"
             href="https://maizeraise.umich.edu/o/university-of-michigan/i/maizeraise/s/tmd-lantern-rivalry"
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
-            The Michigan Daily >
+            The Michigan Daily
           </a>
         </h2>
         <div className="progress_container">
@@ -54,7 +53,7 @@ export default function DonationGraphic() {
               id="dailyProgress"
               className="progress__bar"
               style={{ backgroundColor: "#374567" }}
-            ></div>
+            />
           </div>
           <h4 className="donation_amount">{dailyMoney} of $10,000</h4>
         </div>
@@ -64,14 +63,14 @@ export default function DonationGraphic() {
           <a
             className="ohio"
             href="https://buckeyefunder.osu.edu/project/28518"
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
-            The Lantern >
+            The Lantern
           </a>
         </h2>
         <div className="progress_container">
           <div className="progress">
-            <div id="lanternProgress" className="progress__bar"></div>
+            <div id="lanternProgress" className="progress__bar" />
           </div>
           <h4 className="donation_amount">{lanternMoney} of $10,000</h4>
         </div>
@@ -81,17 +80,19 @@ export default function DonationGraphic() {
         <div className="donation-button">
           <a
             href="https://maizeraise.umich.edu/o/university-of-michigan/i/maizeraise/s/tmd-lantern-rivalry"
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
-            <img src={tmd} />
+            <img src={tmd} alt="The Michigan Daily logo" />
           </a>
         </div>
         <div className="donation-button">
-          <a href="https://buckeyefunder.osu.edu/project/28518" target="_blank">
-            <img src={lantern} />
+          <a href="https://buckeyefunder.osu.edu/project/28518" target="_blank" rel="noreferrer">
+            <img src={lantern} alt="The Lantern logo" />
           </a>
         </div>
       </div>
     </div>
   );
 }
+
+export default DonationGraphic;

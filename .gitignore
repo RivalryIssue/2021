@@ -1,14 +1,11 @@
 .cache/
 .parcel-cache/
 node_modules/
-package-lock.json
 dist/
+yarn-error.log
 
 **/.DS_Store
 
 auth.json
 
-src/*data/
-src/index.html
-
-template/copy.json
+src/data/

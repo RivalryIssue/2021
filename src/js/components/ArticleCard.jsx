@@ -21,7 +21,7 @@ const ArticleCard = ({ data, count }) => {
   return (
     <div className="testWrap">
       <div
-        style={{ backgroundImage: "url(" + data.img + ")" }}
+        style={{ backgroundImage: `url(${  data.img  })` }}
         className={`article-card ${div_class_name} ${div_id}`}
       >
         <div className="article-text">
@@ -29,16 +29,12 @@ const ArticleCard = ({ data, count }) => {
             <h1 className="article-title">{data.title}</h1>
           </a>
           <div className="article-author">{data.author}</div>
-          {/* <p
-          className="article-blurb"
-          dangerouslySetInnerHTML={{ __html: data.desc }}
-        ></p> */}
-          <img className="card-news-logo" src={logo_src} alt=""></img>
+          <img className="card-news-logo" src={logo_src} alt="" />
           <br />
           <a href={data.link}>
             <button
+              type="button"
               className="article-card-button"
-              onClick=""
               title={data.link}
             >
               Read Article

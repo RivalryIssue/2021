@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SchoolIntro from "./SchoolIntro";
 
 const Tabs = () => {
-  var [activeId, setActive] = useState("tab1");
+  const [activeId, setActive] = useState("tab1");
 
   function tabClick(e) {
     setActive(e.target.id);

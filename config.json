@@ -1,11 +1,11 @@
 {
-  "archie": {
-    "gdoc": "1ZHkeFQJzjH_vm3GTB9ZSRGS_lZQHcmlkI2Qf5Rp6HSM",
-    "template": "./template/index.html",
-    "output": "./template/copy.json",
-    "apiConfig": "./auth.json"
-  },
-  "hostname": "magnify.michigandaily.us",
-  "base_url": "sourdough",
+  "hed": "The Rivalry Edition",
+  "fetch": [
+    {
+      "id": "1ZHkeFQJzjH_vm3GTB9ZSRGS_lZQHcmlkI2Qf5Rp6HSM",
+      "output": "./src/data/copy.json",
+      "auth": "./auth.json"
+    }
+  ],
   "ga_id": "G-BLVSNREB3V"
 }
