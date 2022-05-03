@@ -149,6 +149,18 @@ body {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
   }
+
+  .player-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
+    height: 100%;
+  }
+  
+  .react-player {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+  }
 }
 
 .allArticles {
@@ -474,17 +486,6 @@ submit {
     img {
       width: 50%;
       margin-bottom: 20px;
-    }
-    .player-wrapper {
-      position: relative;
-      padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
-      height: 100%;
-    }
-    
-    .react-player {
-      position: absolute;
-      top: 5%;
-      left: 5%;
     }
   }
   .donation_title {

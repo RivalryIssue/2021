@@ -1,6 +1,6 @@
 import React from "react";
-import "./LandingPage.css";
 import Scroll from "react-scroll";
+import "./LandingPage.css";
 import tmdLogo from "../../../images/tmd-logo-black.png";
 import lanternLogo from "../../../images/lanternLogo.png";
 
