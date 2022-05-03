@@ -11,7 +11,7 @@ gh-pages: PAGES = "https://github.com/RivalryIssue/$(REPO)/settings/pages"
 gh-pages:
 	yarn clean
 	yarn run parcel build --no-scope-hoist src/index.html --public-url $(SITE)
-	(cd dist; cp ../src/CNAME .)
+	(cd dist; cp ../CNAME .)
 	(cd dist; git add --all)
 	(cd dist; git commit -m "Build output as of $(shell git log '--format=format:%H' main -1)" || echo "No changes to commit.")
 	(cd dist; git pull -s ours --no-edit origin gh-pages --allow-unrelated-histories || echo "Could not pull from origin.")
