@@ -22,7 +22,7 @@
       rgba(187, 0, 0, 0.3),
       rgba(187, 0, 0, 0.3)
     ),
-    url("../../../images/osu_cover.jpg");
+    url("../../../images/cover/osu-cover.jpg");
   background-size: cover;
   background-position: right;
 }
@@ -34,7 +34,7 @@
       rgba(255, 203, 5, 0.3),
       rgba(255, 203, 5, 0.3)
     ),
-    url("https://images.rivals.com/image/upload/f_auto,q_auto/xyl1hw5axp8ndhsuwkt3");
+    url("../../../images/cover/mi-cover.jpeg");
   background-size: cover;
 }
 

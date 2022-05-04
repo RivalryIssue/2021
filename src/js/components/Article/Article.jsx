@@ -2,7 +2,7 @@ import React from "react";
 import "./Article.css";
 import { Helmet } from "react-helmet";
 import tmd from "../../../images/tmd-logo-black.png";
-import lantern from "../../../images/lanternLogo.png";
+import lantern from "../../../images/lantern-logo-black.png";
 
 const Article = ({ data, school }) => {
   let img =

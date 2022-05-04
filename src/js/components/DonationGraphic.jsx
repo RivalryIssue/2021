@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import tmd from "../../images/tmd-donate.jpg";
-import lantern from "../../images/lantern-donate.jpg";
+import tmd from "../../images/donate/tmd-donate.jpg";
+import lantern from "../../images/donate/lantern-donate.jpg";
 
 const DonationGraphic = () => {
   const [lanternMoney, setLanternMoney] = useState("");

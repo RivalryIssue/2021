@@ -2,7 +2,7 @@ import React from "react";
 import Scroll from "react-scroll";
 import "./LandingPage.css";
 import tmdLogo from "../../../images/tmd-logo-black.png";
-import lanternLogo from "../../../images/lanternLogo.png";
+import lanternLogo from "../../../images/lantern-logo-black.png";
 
 const LandingPage = () => {
   const scroll = Scroll.animateScroll;

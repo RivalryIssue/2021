@@ -1,6 +1,6 @@
 import React from "react";
-import tmdLogoBlack from "../../images/tmd-logo-black.png";
-import lanternLogo from "../../images/lanternLogo.png";
+import tmdLogoBlack from "../../images/logo/tmd-logo-black.png";
+import lanternLogo from "../../images/logo/lantern-logo-black.png";
 
 const ArticleCard = ({ data }) => {
   let divClassName = "article-card";
