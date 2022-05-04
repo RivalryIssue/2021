@@ -1,12 +1,16 @@
 import React from "react";
-import data from "../../data/copy.json";
+import PropTypes from "prop-types";
 
-const Intro = () => (
+const Intro = ({ description }) => (
   <div className="articleContainer">
     <div className="schoolIntro" style={{ marginBottom: 0 }}>
-      <div className="intro-desc">{data.homepage.description}</div>
+      <div className="intro-desc">{description}</div>
     </div>
   </div>
 );
+
+Intro.propTypes = {
+  description: PropTypes.string.isRequired
+}
 
 export default Intro;

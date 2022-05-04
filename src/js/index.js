@@ -15,10 +15,10 @@ window.onload = () => {
 const App = () => (
   <>
     <LandingPage data={data} />
-    <Intro />
+    <Intro description={data.homepage.description} />
     <DonationGraphic />
     <Tabs />
-    <ArticleGrid />
+    <ArticleGrid data={data}/>
   </>
 )
 

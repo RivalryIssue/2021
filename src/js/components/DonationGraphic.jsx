@@ -8,10 +8,11 @@ const DonationGraphic = () => {
 
   const updateProgressBar = (value, elt) => {
     const str = value.slice(1).replaceAll(",", "");
+    // eslint-disable-next-line no-param-reassign
     value = Math.min(Number(str) / 100, 100);
     const progressbar = document.getElementById(elt);
     if (value >= 0 && value <= 100) {
-      progressbar.style.width = `${value  }%`;
+      progressbar.style.width = `${value}%`;
     }
   };
 
@@ -70,7 +71,11 @@ const DonationGraphic = () => {
         </h2>
         <div className="progress_container">
           <div className="progress">
-            <div id="lanternProgress" className="progress__bar" />
+            <div
+              id="lanternProgress"
+              className="progress__bar"
+              style={{ backgroundColor: "rgb(226, 2, 2)" }}
+            />
           </div>
           <h4 className="donation_amount">{lanternMoney} of $10,000</h4>
         </div>

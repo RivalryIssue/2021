@@ -1,12 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 import ArticleCard from "./ArticleCard";
-import data from "../../data/copy.json";
 
-const ArticleGrid = () => {
-  const interleave = (a, b) => {
+const ArticleGrid = ({ data }) => {
+  const interweave = (a, b) => {
     const min = Math.min(a.length, b.length);
-    return Array.apply(null, Array(min))
-      .reduce((result, value, index) => {
+    return Array(...Array(min))
+      .reduce((result, _, index) => {
         result.push(a[index], b[index]);
         return result;
       }, [])
@@ -15,8 +15,9 @@ const ArticleGrid = () => {
   const getAllData = () => {
     const um = data.michigan.articles.map((a) => ({ ...a, school: "UM" }));
     const osu = data.ohio.articles.map((a) => ({ ...a, school: "OSU" }));
-    return interleave(um, osu);
+    return interweave(um, osu);
   };
+
   return (
     <div className="articleContainer">
       <div className="allArticles">
@@ -25,5 +26,16 @@ const ArticleGrid = () => {
     </div>
   );
 };
+
+ArticleGrid.propTypes = {
+  data: PropTypes.shape({
+    michigan: PropTypes.shape({
+      articles: PropTypes.arrayOf(PropTypes.shape())
+    }).isRequired,
+    ohio: PropTypes.shape({
+      articles: PropTypes.arrayOf(PropTypes.shape())
+    }).isRequired
+  }).isRequired
+}
 
 export default ArticleGrid;

@@ -1,21 +1,21 @@
 import React from "react";
+import PropTypes from "prop-types";
 import tmdLogoBlack from "../../images/logo/tmd-logo-black.png";
 import lanternLogo from "../../images/logo/lantern-logo-black.png";
 
 const ArticleCard = ({ data }) => {
   let divClassName = "article-card";
-
-  let divID = "";
+  let divID;
   let logoSrc;
-  // let image_src = data.img;
+
   if (data.school === "UM") {
     divClassName = `right-${divClassName}`;
-    divID += "michigan-card";
-    logoSrc = tmdLogoBlack; // daily logo
+    divID = "michigan-card";
+    logoSrc = tmdLogoBlack;
   } else {
     divClassName = `left-${divClassName}`;
-    divID += "osu-card";
-    logoSrc = lanternLogo; // lantern logo
+    divID = "osu-card";
+    logoSrc = lanternLogo;
   }
 
   return (
@@ -45,5 +45,15 @@ const ArticleCard = ({ data }) => {
     </div>
   );
 };
+
+ArticleCard.propTypes = {
+  data: PropTypes.shape({
+    school: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+  }).isRequired
+}
 
 export default ArticleCard;
