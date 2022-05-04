@@ -11,27 +11,15 @@ const Tabs = () => {
   return (
     <div className="articleContainer">
       <br />
-      <ul className="mainTabs">
-        <li
-          id="tab1"
+      <div className="mainTabs">
+        <button
           className={activeId === "tab1" ? "activeTab" : undefined}
-          onClick={tabClick}
-        >
-          The Michigan Daily
-        </li>
-        <li
-          id="tab2"
+          id="tab1" type="button" onClick={tabClick}>The Michigan Daily</button>
+        <button
           className={activeId === "tab2" ? "activeTab" : undefined}
-          onClick={tabClick}
-        >
-          The Lantern
-        </li>
-      </ul>
-      {activeId === "tab1" ? (
-        <SchoolIntro tabType="UM" />
-      ) : (
-        <SchoolIntro tabType="OSU" />
-      )}
+          id="tab2" type="button" onClick={tabClick}>The Lantern</button>
+      </div>
+      <SchoolIntro tab={activeId === "tab1" ? "UM" : "OSU"} />
     </div>
   );
 };
