@@ -64,19 +64,26 @@
   margin: 0;
 }
 
-.fa-chevron-circle-down {
-  color: white;
+.chevron {
   position: absolute;
   bottom: 3vh;
+  margin-left: calc(50% - 31px);
+  background-color: transparent;
+  border: none;
+}
+
+.fa-chevron-circle-down {
+  color: white;
   font-size: 50px;
-  margin-left: calc(50% - 18px);
   -moz-animation: bounce 3s infinite;
   -webkit-animation: bounce 3s infinite;
   animation: bounce 3s infinite;
 }
+
 .fa-chevron-circle-down:hover {
   cursor: pointer;
 }
+
 @-moz-keyframes bounce {
   0%,
   20%,
@@ -155,17 +162,9 @@
 
 @media only screen and (max-width: 600px) {
   .logo_title_box {
-    font-size: 40px;
-    /* height: 70vh; */
     margin-top: -90vh;
-    padding: 15px;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .logo_title_box {
-    width: 70%;
     margin-left: 15%;
+    width: 70%;
     padding: 40px 20px;
     font-size: 30px;
   }

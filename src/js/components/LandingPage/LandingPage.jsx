@@ -29,7 +29,9 @@ const LandingPage = () => {
         </a>
       </div>
 
-      <i className="fa fa-chevron-circle-down" onClick={scrollClick} />
+      <button onClick={scrollClick} type="button" className="chevron">
+        <i className="fa fa-chevron-circle-down" />
+      </button>
     </>
   );
 };
