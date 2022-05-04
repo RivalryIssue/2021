@@ -1,8 +1,8 @@
 import React from "react";
 import Scroll from "react-scroll";
-import "./LandingPage.css";
-import tmdLogo from "../../../images/logo/tmd-logo-black.png";
-import lanternLogo from "../../../images/logo/lantern-logo-black.png";
+import "../../css/landing.scss";
+import tmdLogo from "../../images/logo/tmd-logo-black.png";
+import lanternLogo from "../../images/logo/lantern-logo-black.png";
 
 const LandingPage = () => {
   const scroll = Scroll.animateScroll;
@@ -13,11 +13,11 @@ const LandingPage = () => {
   return (
     <>
       <div className="landing-page">
-        <div className="LandingPage_Image_Michigan" />
-        <div className="LandingPage_Image_Ohio" />
+        <div className="landing-page-michigan" />
+        <div className="landing-page-ohio" />
       </div>
 
-      <div className="logo_title_box">
+      <div className="logo-title-box">
         <h1>The Rivalry</h1>
         <h2>2021</h2>
         <a href="https://michigandaily.com" target="_blank" rel="noreferrer">

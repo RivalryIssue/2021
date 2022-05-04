@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import ArticleGrid from "./components/ArticleGrid";
 import DonationGraphic from "./components/DonationGraphic";
 import Intro from "./components/Intro";
-import LandingPage from "./components/LandingPage/LandingPage";
+import LandingPage from "./components/LandingPage";
 import Tabs from "./components/Tabs";
 import data from "../data/copy.json";
 
