@@ -5,27 +5,27 @@ import lanternLogo from "../../images/logo/lantern-logo-black.png";
 
 const ArticleCard = ({ data }) => {
   let divClassName = "article-card";
-  let divID;
+  let school;
   let logoSrc;
 
   if (data.school === "UM") {
     divClassName = `right-${divClassName}`;
-    divID = "michigan-card";
+    school = "michigan-card";
     logoSrc = tmdLogoBlack;
   } else {
     divClassName = `left-${divClassName}`;
-    divID = "osu-card";
+    school = "osu-card";
     logoSrc = lanternLogo;
   }
 
   return (
-    <div className="testWrap">
+    <div className="article-card-wrapper">
       <div
         style={{ backgroundImage: `url(${data.img})` }}
-        className={`article-card ${divClassName} ${divID}`}
+        className={`article-card ${divClassName} ${school}`}
       >
         <div className="article-text">
-          <a href={data.link} className={`text-link ${divID}-link`}>
+          <a href={data.link} className={`text-link ${school}-link`}>
             <h1 className="article-title">{data.title}</h1>
           </a>
           <div className="article-author">{data.author}</div>

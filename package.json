@@ -5,8 +5,8 @@
   "scripts": {
     "prepare": "husky install",
     "clean": "rm -rf dist/* && rm -rf .parcel-cache",
-    "build": "yarn clean && parcel build --public-url ./ src/index.html",
-    "start": "yarn clean && parcel src/index.html"
+    "build": "yarn clean && parcel build --public-url ./ src/index.html src/404.html",
+    "start": "yarn clean && parcel src/index.html src/404.html"
   },
   "dependencies": {
     "prop-types": "^15.8.1",

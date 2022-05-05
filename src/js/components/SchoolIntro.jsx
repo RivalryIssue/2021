@@ -3,7 +3,7 @@ import ReactPlayer from "react-player/youtube";
 import PropTypes from "prop-types";
 
 const SchoolIntro = ({ tab }) => (
-  <div className="articleContainer" style={{ marginTop: "20px" }}>
+  <div className="container" style={{ marginTop: "20px" }}>
     <div className="schoolIntro">
       <div className="player-wrapper">
         <ReactPlayer

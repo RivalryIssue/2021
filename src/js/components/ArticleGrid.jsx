@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ArticleCard from "./ArticleCard";
+import "../../css/article.scss";
 
 const ArticleGrid = ({ data }) => {
   const interweave = (a, b) => {
@@ -19,8 +20,8 @@ const ArticleGrid = ({ data }) => {
   };
 
   return (
-    <div className="articleContainer">
-      <div className="allArticles">
+    <div className="container">
+      <div className="article-grid">
         {getAllData().map((d, i) => <ArticleCard key={`${d.school}-${d.link}`} data={d} count={i} />)}
       </div>
     </div>

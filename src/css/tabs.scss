@@ -1,0 +1,57 @@
+.tabs {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+
+  button {
+    font-family: "Roboto Condensed";
+    background-color: transparent;
+    border: none;
+    color: gray;
+    font-size: 20px;
+    display: inline-block;
+    padding: 15px 30px;
+    position: relative;
+
+    &:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: gray;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+
+    &:hover,
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover:after,
+    &:focus:after {
+      width: 80%;
+      left: 10%;
+    }
+  }
+
+  .active {
+    color: black;
+
+    &:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 10;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 10%;
+      position: absolute;
+      background: black;
+      width: 80%;
+    }
+  }
+}
