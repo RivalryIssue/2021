@@ -3,7 +3,11 @@ import PropTypes from "prop-types";
 
 const Intro = ({ description }) => (
   <div className="container">
-    <div className="schoolIntro" style={{ marginBottom: 0 }}>
+    <div style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center"
+    }}>
       <div className="intro-desc">{description}</div>
     </div>
   </div>
