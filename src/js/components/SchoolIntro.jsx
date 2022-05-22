@@ -6,6 +6,7 @@ const SchoolIntro = ({ tab }) => (
     <div className="schoolIntro">
       <div className="player-wrapper">
         <iframe 
+          loading="lazy"
           width="100%" 
           height="100%" 
           src={tab === "UM" ? "https://www.youtube.com/embed/oIs_KnbBD7g" : "https://www.youtube.com/embed/VTEqUF289pk" }
