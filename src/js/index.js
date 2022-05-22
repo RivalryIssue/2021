@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import ArticleGrid from "./components/ArticleGrid";
 import DonationGraphic from "./components/DonationGraphic";
 import Intro from "./components/Intro";
@@ -9,7 +9,8 @@ import data from "../data/copy.json";
 
 window.onload = () => {
   const mountNode = document.getElementById("app");
-  ReactDOM.render(<App />, mountNode);
+  const root = createRoot(mountNode);
+  root.render(<App />);
 };
 
 const App = () => (

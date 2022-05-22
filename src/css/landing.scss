@@ -70,7 +70,7 @@
   background-color: transparent;
   border: none;
 
-  .fa-chevron-circle-down {
+  svg {
     color: white;
     font-size: 50px;
     -moz-animation: bounce 3s infinite;
@@ -97,7 +97,7 @@
 }
 
 @media only screen and (max-width: 1250px) {
-  .fa-chevron-circle-down {
+  .chevron svg {
     bottom: 5vh;
   }
   .logo-title-box {

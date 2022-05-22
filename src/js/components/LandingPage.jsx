@@ -1,5 +1,7 @@
 import React from "react";
 import Scroll from "react-scroll";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "../../css/landing.scss";
 import tmdLogo from "../../images/logo/tmd-logo-black.png";
 import lanternLogo from "../../images/logo/lantern-logo-black.png";
@@ -30,7 +32,7 @@ const LandingPage = () => {
       </div>
 
       <button onClick={scrollClick} type="button" className="chevron" aria-label="Scroll down">
-        <i className="fa fa-chevron-circle-down" />
+        <FontAwesomeIcon icon={faCircleChevronDown} />
       </button>
     </>
   );
