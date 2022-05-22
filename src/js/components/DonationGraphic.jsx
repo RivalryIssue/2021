@@ -56,7 +56,7 @@ const DonationGraphic = () => {
               style={{ backgroundColor: "#374567" }}
             />
           </div>
-          <h4 className="donation_amount">{dailyMoney} of $10,000</h4>
+          <h3 className="donation_amount">{dailyMoney} of $10,000</h3>
         </div>
       </div>
       <div className="donation_container">
@@ -77,7 +77,7 @@ const DonationGraphic = () => {
               style={{ backgroundColor: "rgb(226, 2, 2)" }}
             />
           </div>
-          <h4 className="donation_amount">{lanternMoney} of $10,000</h4>
+          <h3 className="donation_amount">{lanternMoney} of $10,000</h3>
         </div>
       </div>
 
