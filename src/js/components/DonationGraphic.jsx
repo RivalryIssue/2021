@@ -87,12 +87,12 @@ const DonationGraphic = () => {
             href="https://maizeraise.umich.edu/o/university-of-michigan/i/maizeraise/s/tmd-lantern-rivalry"
             target="_blank" rel="noreferrer"
           >
-            <img src={tmd} alt="The Michigan Daily logo" />
+            <img src={tmd} alt="The Michigan Daily logo" loading="lazy"/>
           </a>
         </div>
         <div className="donation-button">
           <a href="https://buckeyefunder.osu.edu/project/28518" target="_blank" rel="noreferrer">
-            <img src={lantern} alt="The Lantern logo" />
+            <img src={lantern} alt="The Lantern logo" loading="lazy" />
           </a>
         </div>
       </div>
