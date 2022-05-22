@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import tmdLogoBlack from "../../images/logo/tmd-logo-black.png";
 import lanternLogo from "../../images/logo/lantern-logo-black.png";
@@ -24,10 +24,18 @@ const ArticleCard = ({ data }) => {
     imgHeight = "30.14px";
   }
 
+  const [source, setSource] = useState("none");
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = data.img;
+    img.onload = () => setSource(`url(${data.img})`);
+  }, [data.img]);
+
   return (
     <div className="article-card-wrapper">
       <div
-        style={{ backgroundImage: `url(${data.img})` }}
+        style={{ backgroundImage: source }}
         className={`article-card ${divClassName} ${school}`}
       >
         <div className="article-text">
