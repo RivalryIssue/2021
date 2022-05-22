@@ -7,15 +7,18 @@ const ArticleCard = ({ data }) => {
   let divClassName = "article-card";
   let school;
   let logoSrc;
+  let logoAlt;
 
   if (data.school === "UM") {
     divClassName = `right-${divClassName}`;
     school = "michigan-card";
     logoSrc = tmdLogoBlack;
+    logoAlt = "The Michigan Daily logo";
   } else {
     divClassName = `left-${divClassName}`;
     school = "osu-card";
     logoSrc = lanternLogo;
+    logoAlt = "The Lantern logo";
   }
 
   return (
@@ -29,7 +32,7 @@ const ArticleCard = ({ data }) => {
             <h1 className="article-title">{data.title}</h1>
           </a>
           <div className="article-author">{data.author}</div>
-          <img className="card-news-logo" src={logoSrc} alt="" />
+          <img className="card-news-logo" src={logoSrc} alt={logoAlt} loading="lazy" />
           <br />
           <a href={data.link}>
             <button
