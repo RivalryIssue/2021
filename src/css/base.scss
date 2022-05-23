@@ -53,6 +53,10 @@ body {
   text-align: left;
   width: 100%;
   max-width: 60%;
+
+  @media (max-width: 600px) {
+    max-width: 80%;
+  }
 }
 
 :root {
@@ -204,13 +208,6 @@ body {
 }
 
 @media only screen and (max-width: 550px) {
-  .schoolIntro {
-    width: 90%;
-    img {
-      width: 70%;
-    }
-  }
-
   .buttons-container {
     width: 90%;
     div {
