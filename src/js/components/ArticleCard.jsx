@@ -38,9 +38,7 @@ const ArticleCard = ({ data }) => {
     const callback = (entries, observer) => {
       const [entry] = entries;
       if (entry.isIntersecting) {
-        const img = new Image();
-        img.src = data.img;
-        img.onload = () => setSource(`url(${data.img})`);
+        setSource(`url(${data.img})`)
         observer.unobserve(ref.current);
       }
     }
