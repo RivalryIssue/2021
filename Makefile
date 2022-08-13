@@ -10,7 +10,7 @@ gh-pages: REPO = $(shell basename -s .git `git remote get-url origin`)
 gh-pages: PAGES = "https://github.com/RivalryIssue/$(REPO)/settings/pages"
 gh-pages:
 	yarn clean
-	yarn run parcel build --no-scope-hoist src/index.html src/404.html --public-url $(SITE)
+	yarn run parcel build --no-scope-hoist src/index.html --public-url $(SITE)
 	(cd dist; cp ../CNAME .)
 	(cd dist; git add --all)
 	(cd dist; git commit -m "Build output as of $(shell git log '--format=format:%H' main -1)" || echo "No changes to commit.")
